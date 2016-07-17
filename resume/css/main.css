@@ -557,7 +557,7 @@ header nav h1{
 	display: block;
 	left: 9px;
 	top: 15px;
-	background: url(http://www.jesseshowalter.com/assets/images/logo-jesseshowalter-inverse.svg) 0px 0px / contain no-repeat;
+	background: url(../images/logo-jesseshowalter-inverse.svg) 0px 0px / contain no-repeat;
 }
 .sub-footer .back-to-top:after{
 	position: absolute;
@@ -643,7 +643,6 @@ header nav h1{
 .modal-dialog .modal-content{
   position: relative;
   width: 100%;
-  border: 1px solid red;
   background: #F6F6F6;
   z-index: 100000;
 }
@@ -716,4 +715,7 @@ header nav h1{
     margin-top: 10px;
     padding: 7px 32px;
     font-size: 12px;
+}
+.modal-dialog .form-content .formbtn:hover{
+	opacity: .9;
 }

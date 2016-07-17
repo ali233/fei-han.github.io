@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>toolBar</title>
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_1468466551_9607298.css">
+  <script src="scripts/jquery-1.11.2.js"></script>
+<style id="jsbin-css">
+*{margin: 0;padding:0;}
+ body{
+  background: white;
+  color: #666;
+  font:12px/1.5 Arial,Verdana,"\5b8b\4f53",serif;
+  -webkit-font-smoothing: antialiased;
+} 
+ul,li{
+  list-style: none;
+}
+.clearfix:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.toolbar{
+  width: 8px;
+  height: 100%;
+  background: #7a6e6e;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+.toolbar .toolbar-content{
+  position: absolute;
+  top: 20%;
+  right: 8px;
+}
+.toolbar .items{
+  width: 34px;
+  height: 34px;
+  color: #fff;
+  margin-bottom: 2px;
+  background: #7a6e6e;
+  transition: all .1s ease-in-out;
+  cursor: pointer;
+}
+.toolbar .items .jd-iconfont{
+  font-size: 20px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+}
+.toolbar .items span{
+  position: absolute;
+  right: 34px;
+  width: 60px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'microsoft yahei';
+  
+  background: #7a6e6e;
+  display: none;
+}
+.toolbar .toolbar-footer{
+  position: absolute;
+  bottom: 0;
+  right: 8px;
+}
+.toolbar .toolbar-footer span{
+  width: 50px;
+}
+.toolbar .items:hover span{
+  display: block;
+  background: #c81623;
+}
+.toolbar .items:hover .jd-iconfont{
+  background: #c81623;
+}
+</style>
+</head>
+<body>
+  
+<div class="toolbar">
+  <div class="toolbar-content">
+    <div class="items"><span>京东会员</span><div class="jd-iconfont i-vip"></div></div>
+    <div class="items"><span>购物车</span><div class="jd-iconfont i-gouwuche"></div></div>
+    <div class="items"><span>我的关注</span><div class="jd-iconfont i-collet"></div></div>
+    <div class="items"><span>我的足迹</span><div class="jd-iconfont i-history"></div></div>
+    <div class="items"><span>我的消息</span><div class="jd-iconfont i-message"></div></div>
+    <div class="items"><span>咨询JIMI</span><div class="jd-iconfont i-kefu"></div></div>
+  </div>
+  <div class="toolbar-footer">
+    <div class="items gototop"><span>顶部</span><div class="jd-iconfont i-gotop"></div></div>
+    <div class="items"><span>留言</span><div class="jd-iconfont i-liuyan"></div></div>
+  </div>
+</div>
+
+<script id="jsbin-javascript">
+
+$.clickGoTop = function(node){
+  
+  var $node = $(node);
+  $node.click(function(){
+    $('body').stop(true,true).animate({scrollTop: 0})
+  })
+
+}
+
+//插件使用
+$.clickGoTop($('.gototop'))
+
+</script>
+</body>
+</html>

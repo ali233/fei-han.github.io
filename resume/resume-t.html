@@ -150,11 +150,6 @@
 					<h3>Web Design</h3>
 					<p>Designing for the web is not a job it's a lifestyle. As technology changes so does the challenge.</p>
 				</article>
-				<!-- <div class="review">
-					The force is strong with Jesse, He is the real deal. He designed and developed the kickstarter material for our new deathstar campaign. The amazing work he did for us is as real as this review.
-					<div class="round"><img src="" alt=""></div>
-					<cite>Darth Vader</cite>
-				</div> -->
 			</div>
 		</div>
 	</section>
@@ -247,7 +242,7 @@
 	var $cover = $('.cover')
 
 	$last.on('click',function(e){
-			console.log(1)
+	 $('body').css({'overflow': 'hidden'}) /*隐藏body的其他内容*/
 	  $modalCt.show()
 	})
 	$close.on('click',function(e){
