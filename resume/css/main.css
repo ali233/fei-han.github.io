@@ -600,3 +600,120 @@ header nav h1{
   display: block;
 }
 
+/**==modal==**/
+.modal-dialog{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; 
+  z-index: 100000;
+  overflow: auto;
+}
+.modal-dialog .cover{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; 
+  background: rgba(39,45,53,.95);
+  transition: opacity .2s linear;
+  z-index: 100000;
+  overflow: auto;
+}
+@media (min-width: 700px){
+ .modal-content{
+   max-width: 800px;
+   margin: 20px auto;
+ } 
+}
+@media (max-width: 867px) {
+	.ribbon{
+		padding: 8px 33px;
+	}
+	
+}
+@media (max-width: 500px) {
+	.ribbon{
+		display: none;
+	}
+	
+}
+.modal-dialog .modal-content{
+  position: relative;
+  width: 100%;
+  border: 1px solid red;
+  background: #F6F6F6;
+  z-index: 100000;
+}
+.modal-dialog .modal-content:before{
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  background: url(http://www.jesseshowalter.com/assets/images/curl.png);
+  width: 69px;
+  height: 63px;
+  z-index: 1;
+}
+.modal-dialog .modal-content .close{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 38px;
+  height: 38px;
+  border-right: 2px solid #3e5368;
+  border-bottom: 2px solid #3e5368;
+  cursor: pointer;
+
+}
+.modal-dialog .modal-content .close:after{
+  content: "×";
+  display: block;
+  font-size: 28px;
+  color: rgb(62, 83, 104);
+  line-height: 34px;
+  text-align: center;
+  font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+  transition: all 0.2s linear;  
+}
+.modal-dialog .modal-content .close:hover{
+  background: #3e5368;
+}
+.modal-dialog .modal-content .close:hover.close:after{
+  color: #fff;
+}
+.modal-dialog .modal-content .ribbon{
+  margin-top: 0;
+}
+.modal-dialog .modal-content img{
+  width: 30%;
+  display: block;
+  margin: 0 auto;
+}
+.modal-dialog .modal-content .title{
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+.modal-dialog .form-content{
+  padding: 10px 50px 50px;
+}
+.modal-dialog .form-content .panel{
+  width: 100%;
+  padding: 8px 6px;
+  border-top: 1px solid #7c7c7c;
+  border-right: 1px solid #c3c3c3;
+  border-left: 1px solid #c3c3c3;
+  border-bottom: 1px solid #ddd;
+}
+.modal-dialog .form-content .error{
+  display: none;
+}
+.modal-dialog .form-content .formbtn{
+    background: #E2CB6D;
+    color: #fff;
+    margin-top: 10px;
+    padding: 7px 32px;
+    font-size: 12px;
+}

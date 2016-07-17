@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/common.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
-<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1468241895_9049811.css">
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_1468241895_9049811.css">
 </head>
 <body>
 <header class="siteTop-wrapper" id="top-js">
@@ -19,7 +19,7 @@
 			<li><a href="#">Work</a></li>
 			<li><a href="#">Articles</a></li>
 			<li><a href="#">Bio</a></li>
-			<li><a href="#">Contact</a></li>
+			<li class="last"><a href="#">Contact</a></li>
 		</ul>
 		<div class="control">
 			<a href="#" class="logo buzz-out"><h1>beyond</h1></a>
@@ -27,6 +27,7 @@
 		</div>
 	</nav>
 </header>
+
 <div class="siteHome-wrapper">
 	<section class="hero">
 		<div class="wrapper clearfix">
@@ -188,8 +189,50 @@
    		<span class="tip">Back To The Top</span>
   </div>
 </div>
+
 <script src="js/scripts/jquery-1.11.2.js"></script>
 <script src="js/animationHeader.js"></script>
+<div class="modal-dialog" id="modal">
+  <div class="cover"></div>
+  <div class="modal-content">
+    <div class="modal-head">
+      <div class="close"></div>
+      <h2 class="ribbon">
+		 <span class="ribbon-content">Contact Me</span>
+	  </h2>
+      <img src="http://www.jesseshowalter.com/assets/images/icon-email.svg" alt="">
+    </div>
+    <div class="form-content">
+      <form action="">
+        <ul>
+        <li class=heighterror>  
+          <lable class=title for=name>姓名</lable>
+          <div>
+            <input type="text" class="panel" id=name name=name placeholder="只能是字母、数字、下划线，3-10个字符">
+          </div>
+          <p class="error">不能为空</p>
+          </li>
+       <li> 
+          <lable class=title for=name>邮箱</lable>
+          <div>
+            <input type="password" class="panel" id=password name="password" placeholder="mysupermail@mail.com">
+          </div>
+          <p class="error">邮箱格式不正确</p>
+       </li>
+       <li>
+        <lable class=title for=conment>留言</lable>
+        <div>
+          <textarea name="conment" class="panel" id="conment"  cols="30" rows="10"></textarea>
+       </div>
+       </li>
+       <li>
+        <input type="submit" class=formbtn value="SUBMIT">
+       </li>
+       </ul>
+      </form>
+  	</div>
+  </div>
+</div>
 <script>
 	var $navToggle = $('#nav-toggle');
 	var $menu = $('nav ul');
@@ -197,6 +240,23 @@
 		  $menu.slideToggle('250');
 		  this.classList.toggle('active');
 	})
+	/*modal*/
+	var $last = $('li.last')
+	var $modalCt = $('#modal')
+	var $close = $('.close')
+	var $cover = $('.cover')
+
+	$last.on('click',function(e){
+			console.log(1)
+	  $modalCt.show()
+	})
+	$close.on('click',function(e){
+	  $modalCt.hide()
+	})
+	$cover.on('click',function(){
+	  $modalCt.hide()
+	})
+
 </script>
 </body>
 </html>

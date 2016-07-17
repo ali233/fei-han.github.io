@@ -7,7 +7,7 @@ nav,output,small,form,div{
 	vertical-align: baseline;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: Merriweather,serif;
+    font-family: "Merriweather","serif";
     color: #272D35;
     line-height: 4rem;
     font-weight: 700;
@@ -15,6 +15,9 @@ h1, h2, h3, h4, h5, h6 {
 *{box-sizing: border-box;}
 ul,li {
 	list-style: none;
+}
+input{
+  border: none;
 }
 img {
 	border: 0;
@@ -25,7 +28,7 @@ a {
 	transition: all .1s ease-in-out;
 }
 body {
-	font-family: "Open Sans",sans-serif;
+	font-family: "Open Sans","sans-serif";
     font-weight: 100;
     color: #475261;
     font-size: 1.3rem;
