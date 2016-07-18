@@ -62,6 +62,7 @@
     $('.whole-time').on('mousedown',function(e){
     	var posX = e.clientX
     	var targetLeft = $(this).offset().left
+        console.log(targetLeft)
     	var timeBarText = (posX - targetLeft)/$('.whole-time').width()*allTime
     	$('audio').prop('onplay',myAudio.currentTime = timeBarText)
     })
