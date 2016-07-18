@@ -1,0 +1,137 @@
+@charset "UTF-8";
+.wrapper{
+	width: 416px;
+    height: 506px;
+    margin: 200px auto 0;
+    /*position: relative;
+    top: 50%;
+    left: 50%;
+    margin-top: -208px;
+    margin-left: -253px;*/
+	background-color: #eef1f2;
+	border-radius: 10px;
+	box-shadow: 0px 6px 7px #999;
+}
+.wrapper .background{
+	width: 100%;
+    height: 268px;
+	border-radius: 15px 15px 0 0;
+	overflow: hidden;
+}
+.wrapper .background img{
+	width: 100%;
+}
+.wrapper .content{
+	padding: 20px;
+	color: #455569;
+	line-height: 30px;
+}
+.wrapper .content .song-info{
+	width: 200px;
+	float: left;
+}
+.wrapper .content .songname{
+	font-size: 20px;
+	font-weight: 700;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.wrapper .content .singer{
+	font-size: 16px;
+	font-weight: 700;
+}
+.wrapper .content .songstyle{
+	font-size: 14px;
+	margin-top: 5px;
+}
+.wrapper .content .music-icon{
+	float: right;
+}
+.wrapper .content .music-icon a,
+.wrapper .content .music-icon span{
+	margin-left: 10px;
+	font-size: 20px;
+}
+span{
+	cursor: pointer;
+}
+span.colored,
+a.colored{
+	color: #cdd2d7;
+}
+span.love{
+	color: #fe8698;
+}
+span.start{
+	color: #feec98
+}
+.progressbar{
+	padding: 0px 20px 5px;
+}
+.progressbar .whole-time{
+	height: 6px;
+	width: 300px;
+	border-radius: 5px;
+	background: #414141;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: middle;
+}
+.progressbar .spent-time{
+	background: #CDD2D7;
+	height: 6px;
+	width: 0px;
+	border-radius: 5px;
+}
+.progressbar .time{
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 30px;
+	width: 30px;
+	font-size: 12px;
+	color: #919191;
+}
+.controls{
+	padding: 20px;
+}
+.controls .play-control{
+	float: left;
+	color: #d9d9d9;
+}
+.controls .play-control .btn1{
+	display: inline-block;
+	vertical-align: middle;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 26px;
+	text-align: center;
+	background: #414141;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.controls .play-control .btn2,
+.controls .play-control .btn3{
+	display: inline-block;
+	vertical-align: middle;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	text-align: center;
+	background: #414141;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.controls .music-control{
+	float: right;
+	line-height: 40px;
+}
+.controls .music-control span{
+	font-size: 20px;
+	margin-left: 8px;
+}
+span.seleted{
+	color: #414141;
+}
