@@ -1,0 +1,15 @@
+*{margin: 0; padding: 0;box-sizing: border-box;}
+ul,ol{list-style: none;}
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
+a{text-decoration: none;}
+body{
+  font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-size: 18px;
+  color: #111;
+}
+img{border: none;vertical-align: middle;}
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}

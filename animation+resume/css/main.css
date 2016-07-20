@@ -1,0 +1,214 @@
+html.not<li>nited{visibility: hidden;}
+.siteWrapper{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1040px;
+}
+/**siteTopbar**/
+.siteTopbar{
+  background: #111;
+  transition: all .5s;
+  animation-duration: 4s;
+  transform: translateY(0%);
+}
+.siteTopbar.hide{
+  transform: translateY(-100%);
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 92px;
+}
+.siteTopbar .logo{
+  width: 62px;
+  height: 92px;
+}
+.siteTopbar .menu{
+	display: flex;
+}
+.siteTopbar .menu>li{
+  margin: 0 18px;
+}
+.siteTopbar .menu>li a{color: #fff;}
+.siteTopbar .menu>li a.selected,
+.siteTopbar .menu>li a:hover{opacity: 0.3;}
+.siteTopbar .medialist{
+	display: flex;
+}
+.siteTopbar .medialist>li{
+  margin: 0 18px;
+  width: 32px;
+  height: 32px;
+}
+/**siteSummary**/
+.summary{
+	padding-top: 55px;
+	padding-bottom: 55px;
+}
+.summary .aboutme{
+	border-bottom: 1px solid #ddd;
+}
+.summary .picture{
+	float: right;
+	width: 590px;
+	height: 440px;
+}
+.summary .introduction{
+	margin-right: 610px;
+}
+.summary .introduction h1{
+	font-size: 70px;
+	font-weight: bold;
+}
+.summary .introduction p{
+	font-size: 26px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.summary .introduction p>small{
+	font-size: 16px;
+}
+.summary .photolist{
+	margin: 18px -14px;
+}
+.summary .photolist>li{
+	float: left;
+	width: 150px;
+	height: 85px;
+	padding: 5px;
+	margin-left: 14px;
+	margin-right: 14px;
+	box-shadow: 0px 1px 3px 0px rgba(0,0,0,.4);
+}
+/**siteSkill**/
+.siteSkill{
+	padding-top: 100px;
+	padding-bottom: 100px;
+	box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,.1);
+	border-bottom: 1px solid #ddd;
+	background: #fafafa;
+}
+.siteSkill .skills{position: relative;}
+.siteSkill h2{
+	font-weight: normal;
+	font-size: 28px;
+	margin-bottom: 5px;
+	line-height: 1.8;
+}
+.siteSkill .designer{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200px;
+}
+.siteSkill .coder{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 200px;
+}
+.siteSkill .list>li{
+	font-size: 18px;
+	line-height: 1.5;
+	margin-bottom: 10px;
+}
+.siteSkill .chart{
+	margin-left: 200px;
+	margin-right: 200px;
+	text-align: center;
+}
+/**siteHobby**/
+.siteHobby{
+	padding-top: 100px;
+	border-bottom: 1px solid #ddd;
+	box-shadow: inset 0px 30px 30px -30px rgba(0,0,0,.05)
+}
+.siteHobby .things{
+	float: right;
+	padding-top: 36px;
+	padding-left: 40px;
+	width: 410px;
+}
+.siteHobby .super{
+	float: right;
+}
+.siteHobby h2{
+	font-weight: normal;
+	font-size: 28px;
+	margin-bottom: 5px;
+	line-height: 1.8;
+}
+.siteHobby .list>li{
+	font-size: 18px;
+	line-height: 1.5;
+	margin-bottom: 10px;
+}
+.skillsFigure{
+	background: #fafafa;
+	padding-top: 100px; 
+/*	padding-bottom: 100px; */
+	box-shadow: inset 0 1px 3px 0 rgba(0,0,0,.1);
+	border-bottom: 1px solid red;
+	
+}
+.skillsFigure .figure{
+	position: relative;
+}
+.skillsFigure .figure h2{
+	text-align: right;
+}
+.skillsFigure .figure .row{
+	border-top: 1px dotted #ddd;
+	border-left: 1px solid #ddd;
+	height: 110px;
+	margin-left: 70px;
+	position: relative;
+}
+.skillsFigure .figure .level{
+	position: absolute;
+	left: -95px;
+    top: -12px;
+    width: 70px;
+    text-align: right;
+}
+.skillsFigure .figure .rectangularBar{
+	position: absolute;
+	left: 70px;
+	bottom: 0;
+}
+.skillsFigure .figure .rectangularBar>.bar{
+	float: left;
+	margin-left: 20px;
+	width: 166px;
+	border: 1px solid #bbb;
+}
+.skillsFigure .figure .rectangularBar>.bar:nth-child(1){
+	height: 420px;
+	background-color: #8dc5be;;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #5fb2a8), color-stop(1, #b0dbd6));
+}
+.skillsFigure .figure .rectangularBar>.bar:nth-child(2){
+	height: 407px;
+	border-color: #ebc0b5;
+    background-color: #f4dcd6;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e1ae9e), color-stop(1, #f4dcd6));
+}
+.skillsFigure .figure .rectangularBar>.bar:nth-child(3){
+	height: 420px;
+	border-color: #e7af30;
+    background-color: #efc563;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #dfae36), color-stop(1, #efc563));
+}
+.skillsFigure .figure .rectangularBar>.bar:nth-child(4){
+	height: 339px;
+	border-color: #dcb386;
+    background-color: #dcba83;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #bc8e5b), color-stop(1, #dcba83));
+}
+.skillsFigure .figure .rectangularBar>.bar:nth-child(5){
+	height: 182px;
+	border-color: #e14949;
+    background-color: #da6d6c;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ca4544), color-stop(1, #da6d6c));
+}
