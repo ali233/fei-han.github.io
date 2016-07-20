@@ -147,9 +147,8 @@ nav{
 .skillsFigure{
 	background: #fafafa;
 	padding-top: 100px; 
-/*	padding-bottom: 100px; */
 	box-shadow: inset 0 1px 3px 0 rgba(0,0,0,.1);
-	border-bottom: 1px solid red;
+	border-bottom: 1px solid #ddd;
 	
 }
 .skillsFigure .figure{
@@ -178,10 +177,19 @@ nav{
 	bottom: 0;
 }
 .skillsFigure .figure .rectangularBar>.bar{
-	float: left;
+	display: inline-block;
+	vertical-align: bottom;
 	margin-left: 20px;
 	width: 166px;
 	border: 1px solid #bbb;
+	text-align: center;
+	position: relative;
+}
+.skillsFigure .figure .rectangularBar>.bar>p{
+	position: absolute;
+	bottom: 20%;
+	left: 50%;
+	text-align: center;
 }
 .skillsFigure .figure .rectangularBar>.bar:nth-child(1){
 	height: 420px;
@@ -211,4 +219,37 @@ nav{
 	border-color: #e14949;
     background-color: #da6d6c;
     background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ca4544), color-stop(1, #da6d6c));
+}
+.siteFeature{
+	padding-top: 100px;
+	padding-bottom: 100px;
+	border-bottom: 1px solid #ddd;
+	box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+}
+.siteFeature .major{
+	float: right;
+	width: 590px;
+	height: 315px;
+}
+.siteFeature .feature{
+	margin-right: 610px;
+	transform: translateX(0%);
+    transition: all 0.5s;
+}
+.siteFeature .feature h2{
+	font-weight: normal;
+	font-size: 28px;
+	margin-bottom: 5px;
+	line-height: 1.8;
+}
+.siteFeature .feature p{
+	font-size: 18px;
+	line-height: 30px;
+	margin-bottom: 20px;
+}
+footer .button{
+	width: 80px;
+	height: 80px;
+	border-radius: 50% 50%;
+	background: #ddd;
 }
