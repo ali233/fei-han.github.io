@@ -1,7 +1,10 @@
 *{margin: 0; padding: 0;box-sizing: border-box;}
 ul,ol{list-style: none;}
 h1,h2,h3,h4,h5,h6{font-weight: normal;}
-a{text-decoration: none;}
+a{
+	text-decoration: none;
+	transition: all .1s;
+}
 body{
   font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial, Sans-serif;
   font-size: 18px;

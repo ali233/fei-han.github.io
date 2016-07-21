@@ -2,8 +2,9 @@
 <html>
 <head>
 <meta name="description" content="resume + 动画" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="scripts/jquery-1.11.2.js"></script>
-<link rel="stylesheet" href="http://at.alicdn.com/t/font_1469032826_5555882.css">
+<link rel="stylesheet" href="http://at.alicdn.com/t/font_1469068712_3360822.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <link rel="stylesheet" type="text/css" href="css/reset.css">
   <meta charset="utf-8">
@@ -33,14 +34,15 @@
 <div class="siteContent">
   <section class="summary siteWrapper">
    <div class="aboutme clearfix">
+       <div class="introduction">
+          <h1>about me</h1>
+          <p>I'm a UX/U Designer and Front End Developer from Sydney, Australia.</p>
+          <p><small>I enjoy turning complex problems into simple, beautiful and intuitive interface designs. When I'm not coding or pushing pixels, you'll find me in the gym or on the court shooting hoops.</small></p>
+       </div>
        <div class="picture">
          <img src="http://www.adhamdannaway.com/wp-content/themes/ad/images/about-adham-dannaway.jpg" alt="我的图片">
        </div>
-       <div class="introduction">
-          <h1>about me</h1>
-          <p><li>'m a UX/U<li> Designer and Front End Developer from Sydney, Australia.</p>
-          <p><small><li> enjoy turning complex problems into simple, beautiful and intuitive interface designs. When <li>'m not coding or pushing pixels, you'll find me in the gym or on the court shooting hoops.</small></p>
-       </div>
+       
    </div>
    <ul class="photolist clearfix">
      <li><a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=20&txt=slide&w=140&h=75" alt=""></a></li>
@@ -106,26 +108,26 @@
           <div class="row lable3"><p class="level">Geek</p></div>
           <div class="row lable4"><p class="level">Newbie</p></div>
       </div>
-      <div class="rectangularBar clearfix">
+      <div class="rectangularBar">
           <div class="bar">
-            <p><strong>95</strong><small>%</small></p>
-            <p>HTML</p>
+            <p class="precent">95<small>%</small></p>
+            <p class="know">HTML</p>
           </div>
           <div class="bar">
-            <p><strong>95</strong><small>%</small></p>
-            <p>CSS</p>
+            <p class="precent">95<small>%</small></p>
+            <p class="know">CSS</p>
           </div>
           <div class="bar">
-            <p><strong>95</strong><small>%</small></p>
-            <p>JavaScript</p>
+            <p class="precent">95<small>%</small></p>
+            <p class="know">JavaScript</p>
           </div>
           <div class="bar">
-            <p><strong>95</strong><small>%</small></p>
-            <p>jQuery</p>
+            <p class="precent">95<small>%</small></p>
+            <p class="know">jQuery</p>
           </div>
           <div class="bar">
-            <p><strong>95</strong><small>%</small></p>
-            <p>Photoshop</p>
+            <p class="precent">95<small>%</small></p>
+            <p class="know">Photoshop</p>
           </div>
       </div>
     </div>
@@ -143,36 +145,42 @@
   </section>
   <footer>
     <div class="siteWrapper">
-    <div class="button">
-      <a href="#" id="gotop" class="iconfont iconfont icon-arrow"></a>
-    </div>
- <!--      <span class="copyright"><a href="#">© 2016 Adham Dannaway</a></span>
-      <ul class="menu">
-          <li><a class="selected" href="#">about</a></li>
-          <li><a href="#">featured</a></li>
-          <li><a href="#">portfolio</a></li>
-          <li><a href="#">blog</a></li>
-          <li><a href="#">contact</a></li>
-      </ul>
-      <div class="mediaLinks">
-        <a href="#" class="iconfont icon-facebook">f<span>赞</span></a>
-        <span class="ret"></span>
-        <a href="#" class="iconfont icon-twitte"><span>@AdhamDannaway</span></a>
-      </div> -->
+        <div class="button">
+          <a href="#" id="gotop"></a>
+        </div>
+        <span class="copyright"><a href="#">© 2016 Adham Dannaway</a></span>
+        <div class="menu">
+          <a href="#">about</a>
+          <a href="#">featured</a>
+          <a href="#">portfolio</a>
+          <a href="#">blog</a>
+          <a href="#">contact</a>
+        </div>
+        <div class="mediaLinks">
+          <a href="#" id="zan"><span class="iconfont icon-facebook"></span>赞</a>
+          <span class="ret">1.1万</span>
+          <a href="#" id="social" class="iconfont icon-twitte"><span>Follow@AdhamDannaway</span></a>
+        </div>
     </div>
   </footer>
 </div>
 <script>
   $(function(){
-$('.siteTopbar').hide().addClass('hide')
-setTimeout(function(){
-   $('.siteTopbar').show()
- },10)
-setTimeout(function(){
-   $('.siteTopbar').removeClass('hide')
- },110)
- 
-})
+      $('.siteTopbar,.summary .aboutme .introduction,.summary .aboutme .photolist').hide().addClass('hide')
+      setTimeout(function(){
+         $('.siteTopbar,.summary .aboutme .introduction,.summary .aboutme .photolist').show()
+       },100)
+      setTimeout(function(){
+         $('.siteTopbar,.summary .aboutme .introduction,.summary .aboutme .photolist').removeClass('hide')
+       },150)
+     
+   })
+  $(function(){
+    $('#gotop').on('click',function(e){
+      e.preventDefault()
+        $('body').animate({scrollTop: 0},500)
+    })
+  })
 </script>
 </body>
 </html>
