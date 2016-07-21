@@ -583,7 +583,7 @@ header nav h1{
   top: -35%;
   left: 50%;
   transform: translateX(-50%);
-  transition: all .1s ease-in-out;
+  transition: all .1s;
   display: none;
 }
 .sub-footer .tip:after{
@@ -717,5 +717,5 @@ header nav h1{
     font-size: 12px;
 }
 .modal-dialog .form-content .formbtn:hover{
-	opacity: .9;
+	opacity: 0.9;
 }
