@@ -10,6 +10,7 @@
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/common.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/wodry.css">
 <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_1468241895_9049811.css">
 </head>
 <body>
@@ -33,14 +34,13 @@
 		<div class="wrapper clearfix">
 			<article class="message">
 				<h1>
-					PROBLEM SOLVING <br> IN 
-					<span class="flipup">
-						<span class="rotating flip up">
-						    <span class="front"> CSS</span>
-						    <span class="back"> Javascript</span>
-				  		</span>
-					</span>
-				</h1>
+			      PROBLEM SOLVING <br> IN 
+			      <span class="flipup">
+			          <span class="wodryRX">
+			               HTML|CSS|javascript|jQuery
+			          </span>
+			      </span>
+			    </h1>
 
 				<p>Hi i'm Jesse, I'm a Designer and Developer. I focus on user problems and provide genuine solutions. I specialize in brand identity, web design, UI and UX design and of course... front end development.</p>
 				<a class="btn" href="#">Let's work together</a>
@@ -228,19 +228,21 @@
   	</div>
   </div>
 </div>
+<script src="js/wodry.js"></script>
 <script>
+(function(){
+	/*------topNav------*/
 	var $navToggle = $('#nav-toggle');
 	var $menu = $('nav ul');
 	$navToggle.on('click',function(e){
 		  $menu.slideToggle('250');
 		  this.classList.toggle('active');
 	})
-	/*modal*/
+	/*------modal------*/
 	var $last = $('li.last')
 	var $modalCt = $('#modal')
 	var $close = $('.close')
 	var $cover = $('.cover')
-
 	$last.on('click',function(e){
 	 $('body').css({'overflow': 'hidden'}) /*隐藏body的其他内容*/
 	  $modalCt.show()
@@ -251,6 +253,23 @@
 	$cover.on('click',function(){
 	  $modalCt.hide()
 	})
+	/*------projects mouseenter------*/
+	var $h3 = $('.projects article h3')
+	 $('.projects').on('mouseenter','article',function(){
+		$(this).siblings().addClass('dim')
+		.$h3.addClass('select')
+	}).on('mouseleave','article',function(){
+		$(this).siblings().removeClass('dim').$h3.removeClass('select')
+	})
+	// console.log($article)
+	/*-----文字翻转-----*/
+	$('.wodryRX').wodry({
+	    animation: 'rotateX',
+	    delay: 1500,
+	    animationDuration: 800
+	});
+})(jQuery)
+	
 
 </script>
 </body>

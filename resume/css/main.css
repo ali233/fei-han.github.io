@@ -214,9 +214,7 @@ header nav h1{
 	color: #fff;
 	font-size: 3.2rem;
 	text-transform: uppercase;
-}
-.siteHome-wrapper .hero .message .flipup{
-	border-bottom: 1px dotted #fff;
+	font-weight: 100;
 }
 .siteHome-wrapper .hero .message p{
 	color: #fff;
@@ -294,8 +292,14 @@ header nav h1{
 .siteHome-wrapper .projects article a{
 	color: #8492a4;
 }
-.siteHome-wrapper .projects article a:hover{
+/*.siteHome-wrapper .projects article a:hover{
 	color: #E0CB77;
+}*/
+article h3.select{
+	color: #E0CB77!important;
+}
+article.dim{
+	opacity: 0.7;
 }
 @media (max-width: 867px){
 	.siteHome-wrapper .projects h2.ribbon{
