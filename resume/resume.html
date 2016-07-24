@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-<title>resume</title>
+<title>Front - End Developer | FeiHan</title>
+<link rel="icon" type="image/png" href="images/favicon.png" />
 <meta http-equiv="Content-Language" content="EN">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="css/reset.css">
@@ -43,7 +44,7 @@
 			    </h1>
 
 				<p>Hi i'm Jesse, I'm a Designer and Developer. I focus on user problems and provide genuine solutions. I specialize in brand identity, web design, UI and UX design and of course... front end development.</p>
-				<a class="btn" href="#">Let's work together</a>
+				<a class="btn" href="#modal">Let's work together</a>
 			</article>			
 		</div>
 	</section>
@@ -231,12 +232,24 @@
 <script src="js/wodry.js"></script>
 <script>
 (function(){
+	/*------navShow------*/
+	$.goNavShow($('#top-js'))
 	/*------topNav------*/
 	var $navToggle = $('#nav-toggle');
 	var $menu = $('nav ul');
 	$navToggle.on('click',function(e){
-		  $menu.slideToggle('250');
-		  this.classList.toggle('active');
+		e.preventDefault()
+	  $menu.slideToggle(250);
+	  this.classList.toggle('active')
+	})
+	$(window).resize(function(){
+		var resizeW=$(window).width();
+		resizeW>320&&$menu.is(':hidden')&&$menu.removeAttr('style')
+	})
+	/*------gotoTop------*/
+	$('.gotop-js').on('click',function(e){
+		e.preventDefault()
+		$('body,html').animate({scrollTop: 0},'slow')
 	})
 	/*------modal------*/
 	var $last = $('li.last')
@@ -244,25 +257,29 @@
 	var $close = $('.close')
 	var $cover = $('.cover')
 	$last.on('click',function(e){
-	 $('body').css({'overflow': 'hidden'}) /*隐藏body的其他内容*/
+	 $('body').addClass('remodal') /*隐藏body的其他内容*/
 	  $modalCt.show()
 	})
 	$close.on('click',function(e){
 	  $modalCt.hide()
+	  $('body').removeClass('remodal')
 	})
 	$cover.on('click',function(){
 	  $modalCt.hide()
+	  $('body').removeClass('remodal')
+	})
+	$('.hero a').on('click',function(e){
+      e.preventDefault()
+	  $modalCt.show()
+	  $('body').addClass('remodal')	  
 	})
 	/*------projects mouseenter------*/
-	var $h3 = $('.projects article h3')
 	 $('.projects').on('mouseenter','article',function(){
 		$(this).siblings().addClass('dim')
-		.$h3.addClass('select')
 	}).on('mouseleave','article',function(){
-		$(this).siblings().removeClass('dim').$h3.removeClass('select')
+		$(this).siblings().removeClass('dim')
 	})
-	// console.log($article)
-	/*-----文字翻转-----*/
+	/*------文字翻转------*/
 	$('.wodryRX').wodry({
 	    animation: 'rotateX',
 	    delay: 1500,

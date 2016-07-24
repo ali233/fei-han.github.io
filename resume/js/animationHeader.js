@@ -1,19 +1,13 @@
-/**==navShow==**/
-$.goShow = function(){
-
-	var $nav = $('header#top-js')
+/*------navShow------*/
+$.goNavShow = function(node){
+	var $node = $(node)
 	$(window).on('scroll',function(e){
 		e.preventDefault();
 		var offsetY = $(this).scrollTop();
 		if (offsetY>=200) {
-			$nav.addClass('visible');
+			$node.addClass('visible');
 		}else{
-			$nav.removeClass('visible')
+			$node.removeClass('visible')
 		}
 	})
 }
-/**==gotoTop==**/
-$.goShow()
-$('.gotop-js').on('click',function(){
-	$('body').animate({scrollTop: 0},'slow')
-})

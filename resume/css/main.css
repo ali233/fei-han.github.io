@@ -12,7 +12,6 @@ header.siteTop-wrapper{
 }
 .visible{
 	background: rgba(0,0,0,.6) !important;
-	transition: all .3s ease-in-out;
 }
 nav{
 	font-family: "Open Sans",sans-serif;
@@ -292,9 +291,9 @@ header nav h1{
 .siteHome-wrapper .projects article a{
 	color: #8492a4;
 }
-/*.siteHome-wrapper .projects article a:hover{
+.siteHome-wrapper .projects article:hover h3{
 	color: #E0CB77;
-}*/
+}
 article h3.select{
 	color: #E0CB77!important;
 }
@@ -722,4 +721,7 @@ article.dim{
 }
 .modal-dialog .form-content .formbtn:hover{
 	opacity: 0.9;
+}
+body.remodal{
+	overflow: hidden;
 }
