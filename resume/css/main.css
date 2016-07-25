@@ -499,7 +499,6 @@ article.dim{
 	height: 60px;
 	line-height: 60px;
 	border-radius: 50%;
-	margin-right: 15px;
 	text-align: center;
 	background: red;
 }
@@ -512,6 +511,7 @@ article.dim{
 }
 .siteHome-wrapper footer .soc .sina{
 	background: #e02a20;
+	margin: 0px 15px;
 }
 .siteHome-wrapper footer .soc .email{
 	background: #9c7c6e;
