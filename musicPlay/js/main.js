@@ -28,19 +28,13 @@
     var allTime = 0
     $('.btn1').on('click',function(){
     	if (myAudio.paused) {
-    		play()
+    		myAudio.play()
+            $('.btn1').removeClass('icon-play').addClass('icon-pause')
     	}else{
-    		pause()
+    		myAudio.pause()
+            $('.btn1').removeClass('icon-pause').addClass('icon-play')
     	}
     })
-    function play(){
-    	myAudio.play()
-    	$('.btn1').removeClass('icon-play').addClass('icon-pause')
-    }
-    function pause(){
-    	myAudio.pause()
-    	$('.btn1').removeClass('icon-pause').addClass('icon-play')
-    }
     /*获取当前歌曲的总播放时间与实际播放时间*/
     function getTime(){
     	currentTime = myAudio.currentTime
