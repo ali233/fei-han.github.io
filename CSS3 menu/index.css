@@ -1,0 +1,72 @@
+*{margin: 0; padding: 0}
+ul{list-style: none;}
+a{text-decoration: none;}
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.wrapper{
+	width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	border: 1px solid #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 1px #f1f1f1;
+}
+.content{
+	padding: 0 20px;
+	height: 80px;
+	position: relative;
+	display: inline-block;
+}
+.desp{
+	text-align: right;
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    left: 135px;
+
+}
+.share{
+	float: left;
+	width: 80px;
+	height: 80px;
+}
+.share .bg{
+	width: 80px;
+	height: 80px;
+	display: block;
+	background: url(images/anim-share.png) 0px 0px no-repeat;
+	animation: share steps(17) 0.8s infinite both;
+}
+@keyframes share{
+	0%{
+		background-position: 0%;
+	}
+	100%{
+		background-position: 100%;
+	}
+}
+.collect .bg{
+	width: 80px;
+	height: 80px;
+	display: block;
+	background: url(images/anim-fav.png) 0px 0px no-repeat;
+	animation: share steps(17) 0.8s infinite both;
+}
+.iPhone .bg{
+	width: 80px;
+	height: 80px;
+	display: block;
+	background: url(images/anim-app.png) 0px 0px no-repeat;
+	animation: share steps(17) 0.8s infinite both;
+}
+.icon .bg{
+	width: 80px;
+	height: 80px;
+	display: block;
+	background: url(images/anim-coin.png) 0px 0px no-repeat;
+	animation: share steps(17) 0.8s infinite both;
+}

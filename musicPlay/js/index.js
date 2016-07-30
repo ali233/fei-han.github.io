@@ -66,7 +66,7 @@ function getMusic(num){
 		$('.singer').text(author)
 		$('.singer').attr('title',author)
 		$('.background').css({
-			'background': 'url('+bgPic+')',
+			'background-image': 'url('+bgPic+')',
 			'background-repeat': 'no-repeat',
 			'background-position': 'center',
 			'background-size': 'cover'
