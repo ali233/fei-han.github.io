@@ -40,10 +40,16 @@
 .wrapper .content .singer{
 	font-size: 12px;
 	font-weight: 700;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 .wrapper .content .songstyle{
 	font-size: 12px;
 	margin-top: 5px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 .wrapper .content .music-icon{
 	float: right;
@@ -81,14 +87,6 @@ span.start{
 	border-radius: 5px;
 	background: #CDD2D7;
 }
-/*.progressbar .time{
-	display: inline-block;
-	vertical-align: middle;
-	padding-left: 30px;
-	width: 30px;
-	font-size: 12px;
-	color: #919191;
-}*/
 .controls{
 	padding: 8px 20px;
 }
@@ -108,7 +106,7 @@ span.start{
 	border-radius: 50%;
 	cursor: pointer;
 }
-.controls .play-control #prevBtn,
+.controls .play-control #changeBtn,
 .controls .play-control #nextBtn{
 	display: inline-block;
 	vertical-align: middle;

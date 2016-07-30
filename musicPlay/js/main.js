@@ -61,7 +61,7 @@
     	$('audio').prop('onplay',myAudio.currentTime = timeBarText)
     })
     /*歌曲地址、背景墙、歌曲信息*/
-    function playMusic(num){
+    function showMusic(num){
     	$('audio').prop('src',musicList[num].hurl)
     	$('.background img').attr('src',musicList[num].pic)
     	$('.song-info .songname').text(musicList[num].name)
@@ -70,16 +70,17 @@
     }
     /*到第几首歌*/
     function go(index){
-    	if (index < 0) {
-    		index = musicList.length - 1
-    	}
-    	if(index > musicList.length - 1){
-    		index = 0
-    	}
-    	currentIndex = index
-    	playMusic(currentIndex)
-    	myAudio.play()
-    	$('.play-control .icon-play').removeClass('icon-play').addClass('icon-pause')
+        if (index > musicList.length-1) {
+            index = 0
+        }
+        if (index < 0) {
+            index = musicList.length-1
+        }
+        var song = musicList[index]
+        current = index
+        showMusic(current)
+        myAudio.play()  
+        $('#controlBtn').addClass('icon-pause').removeClass('icon-play')
     }
     function next(){
     	go(currentIndex + 1)
@@ -103,7 +104,6 @@
     $('.music-control span').on('click',function(){
     	$(this).addClass('seleted').siblings('span').removeClass('seleted')
     })
-    window.onload= playMusic(currentIndex);
+    window.onload= showMusic(currentIndex);
     setInterval(getTime,500);
  })
- 

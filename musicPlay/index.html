@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="referrer" content="no-referrer">
 <title>music play</title>
 <link rel="icon" type="imgs/png" href="http://jesseshowalter.com/favicon.png" />
-<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_1468850457_7071311.css">
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_1469876470_5415266.css">
 <link rel="stylesheet" type="text/css" href="css/index.css">
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 </head>
@@ -13,7 +13,6 @@
     <div class="wrapper">
         <!-- 歌曲背景墙 -->
     	<div class="background">
-    		<img src="" alt="">
     	</div>
     	<audio src=""></audio>
     	<div class="content clearfix">
@@ -24,9 +23,9 @@
     		</div>
     		<!-- 分享，收藏，喜欢 -->
     		<div class="music-icon">
-    			<a class="iconfont icon-share colored" href="http://service.weibo.com/share/share.php?appkey=&title=&url=&pic=&searchPic=false&style=simple" target="_blank"></a>
-    			<span class="iconfont icon-collect colored"></span>
-    			<span class="iconfont icon-tolove colored"></span>
+    			<a class="iconfont icon-share colored" href="http://service.weibo.com/share/share.php?appkey=&title=&url=&pic=&searchPic=false&style=simple" target="_blank" title="分享"></a>
+    			<span class="iconfont icon-collect colored" title="收藏"></span>
+    			<span class="iconfont icon-tolove colored" title="喜欢"></span>
     		</div>
     	</div>
     	<!-- 进度条 -->
@@ -37,13 +36,13 @@
     	    <!-- 音乐播放、换频道、下一曲 -->
 	    	<div class="play-control">
 	    		<span class="iconfont icon-play" id="controlBtn" title="播放/暂停"></span>
-	    		<span class="iconfont icon-prevsong" id="prevBtn" title="上一曲"></span>
-	    		<span class="iconfont icon-nextSong" id="nextBtn" title="下一曲"></span>
+	    		<span class="iconfont icon-channel" id="nextBtn" title="下一曲"></span>
+	    		<span class="iconfont icon-nextSong" id="changeBtn" title="下一频道"></span>
 	    	</div>
 	    	<!-- 循环播放、随机播放 -->
 	    	<div class="music-control">
-	    		<span class="iconfont icon-cyclePlay colored"></span>
-	    		<span class="iconfont icon-randomPlay colored"></span>
+	    		<span class="iconfont icon-cyclePlay colored" id="cycle" title="单曲循环"></span>
+	    		<!-- <span class="iconfont icon-randomPlay colored" id="random" title="随机播放"></span> -->
 	    	</div>
     	</div>
     </div>
