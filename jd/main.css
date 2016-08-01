@@ -41,6 +41,7 @@ button{
 .siteTobar-wrapper{
   background-color: #f1f1f1;
 }
+/*--siteTopbar--*/
 .siteTopbar{
   height: 30px;
   line-height: 30px;
@@ -73,7 +74,6 @@ button{
   transition: transform 0.2s;
   position: relative;
   top: 7px;
-  
 }
 .location-wrapper:hover .location{
   background: #fff;
@@ -127,7 +127,6 @@ button{
   background: #C81623;
   color: #fff;
 }
-/*location*/
 .siteTopbar .siteTopbar-links{
   float: right;
 }
@@ -143,7 +142,6 @@ button{
   border-right: 1px solid #ddd;
   background: #fff;
 }
-
 .siteTopbar .siteTopbar-links>ul>li a{
   padding: 0 7px;
 }
@@ -162,9 +160,7 @@ button{
 .siteTopbar-links .link-register{
   color: #C81623;
 }
-/*siteTopbar-links*/
-
-
+/*--site-logo-search-cart--*/
 .site-logo-search-cart{
   padding: 19px 0;
 }
@@ -172,15 +168,12 @@ button{
 .site-logo-search-cart .search,
 .site-logo-search-cart .cart{
   float: left;
-
 }
 .site-logo-search-cart .logo>img{
   width: 270px;
   height: 60px;
   vertical-align: top;
 }
-/*site-logo-search-cart*/
-
 .site-logo-search-cart .search{
    margin-left: 98px;
    margin-top: 4px;
@@ -197,7 +190,6 @@ button{
   border: 2px solid #B61D1D;
   box-sizing: border-box;
 }
-
 .site-logo-search-cart .search>.siteSearch>button{
   float: right;
   height: 36px;
@@ -209,12 +201,10 @@ button{
   font-family: "microsoft yahei";
   cursor: pointer;
 }
-
 .site-logo-search-cart .search>.recommendWords{
   margin-top: 4px;
 }
 .site-logo-search-cart .search>.recommendWords>a{
-  /* display: inline-block; */
   padding-right: 0.6em;
 }
 .site-logo-search-cart .search>.recommendWords>a.hot{
@@ -223,12 +213,11 @@ button{
 .site-logo-search-cart .search>.recommendWords>a:hover{
   color: #C81623;
 }
+/*shopping-cart button collect*/
 .site-logo-search-cart .cart{
   margin-top: 4px;
   margin-left: 98px; 
 }
-/**search button recommendWords**/
-
 .site-logo-search-cart .cart>.siteCartButton{
   box-sizing:border-box;
   line-height: 34px;
@@ -263,7 +252,6 @@ button{
   top: -4px;
   right: 18px;
 }
-
 .site-logo-search-cart .cart{
   position: relative;
 }
@@ -273,7 +261,6 @@ button{
   right: 0;
   z-index: 3;
 }
-
 .site-logo-search-cart .cart>.cartCollect{
   display: none;
   width: 300px;
@@ -303,7 +290,6 @@ button{
   background: #fff;
   box-shadow: 0 0 3px rgba(0,0,0,0.25);
 }
-/*shopping-cart button collect*/
 .categorys-wrapper{
   border-bottom: 2px solid #B1191A
 }
@@ -327,8 +313,18 @@ button{
   color: #333;
   font: 400 16px "microsoft yahei";
 }
-/*categorys*/
-
+/*--big-bg--*/
+.big-bg{
+  position: relative;
+}
+.big-bg .activity-focus-bg{
+  position: absolute;
+  width: 100%;
+  height: 630px;
+  background: url(imgs/big-bg.jpg) center top no-repeat;
+  z-index: -1;
+}
+/*--product-category--*/
 .product-category{
   position: relative;
   float: left;
@@ -350,7 +346,6 @@ button{
   color: #fff;
   cursor: pointer;
   position: relative;
-  
 }
 .product-category .category .cm-right-arrow:after{
   position: absolute;
@@ -388,6 +383,7 @@ button{
   vertical-align: top;
   width: 730px;
 }
+/*--submenu--*/
 .submenu-items-left .items-head a{
   display: inline-block;
   margin-right: 10px;
@@ -400,7 +396,6 @@ button{
   line-height: 24px;
   padding-left: 10px;
   font-family: 'microsoft yahei';
-  
 }
 .submenu-items-left .items-head a span:after{
   display: inline-block;
@@ -449,7 +444,6 @@ button{
   border-left: 1px solid #ddd;
   padding: 0 8px;
   margin: 4px 0;
-
 }
 .submenu-items-left .items-content a:hover{
   color: #B61D1D;
@@ -471,8 +465,7 @@ button{
 .product-category .submenu .submenu-art-right .big-art a{
   margin-bottom: 1px;
 }
-/**submenu**/
-
+/*--aside--*/
 .list-slides-news-service-wrapper>.artSlides{
   float: left;
   margin-top: 12px;
@@ -527,8 +520,8 @@ button{
 }
 .list-slides-news-service-wrapper>.artSlides .slidesjs-pagination>li>a.active{
   background: #b61b1f;
-}/*plug*/
-
+}
+/*--aside--*/
 .list-slides-news-service-wrapper aside{
   float: left;
   margin-left: 10px;
@@ -607,7 +600,7 @@ button{
   padding-top: 6px;
   vertical-align: top;
 }
-/*aside*/
+/*--todayRecommend--*/
 .todayRecommend{
   margin-top: 10px;
   position: relative;
@@ -649,7 +642,7 @@ button{
 .todayRecommend .recommend-slider:hover .slidesjs-navigation{
   display: block;
 }
-/*todayRecommend*/
+/*--toolbar--*/
 .toolbar{
   width: 8px;
   height: 100%;
@@ -688,7 +681,6 @@ button{
   text-align: center;
   font-size: 14px;
   font-family: 'microsoft yahei';
-  
   background: #7a6e6e;
   display: none;
 }
@@ -707,7 +699,7 @@ button{
 .toolbar .items:hover .jd-iconfont{
   background: #c81623;
 }
-/**toolbar**/
+/*--siteService--*/
 .siteService {
   margin-bottom: 20px;
 }
@@ -758,7 +750,7 @@ button{
 .siteService .guide-center .map .details{
   text-align: right;
 }
-/**siteService**/
+/*--sitefooter--*/
 .sitefooter .info-box{
   padding: 20px 0 30px;
   border-top: 1px solid #e5e5e5;
@@ -776,4 +768,3 @@ button{
 .sitefooter .info-box .authentication a{
   padding: 0 5px;
 }
-/**sitefooter**/
