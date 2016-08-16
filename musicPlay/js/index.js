@@ -27,7 +27,7 @@ function pause(){
 /*--获取随机频道信息--*/
 function getChannel(){
 	$.ajax({
-		url: 'https://douban.fm/j/app/radio/channels',
+		url: 'http://api.jirengu.com/fm/getChannels.php',
 		dataType: 'json',
 		Method: 'get',
 		success: function(response){
@@ -46,7 +46,7 @@ function getChannel(){
 /*--获取歌曲信息--*/
 function getMusic(num){
 	$.ajax({
-	url: 'https://douban.fm/j/mine/playlist?type=s&sid=331663&pt=112.3&channel=3770138&pb=64&from=mainsite&r=a91682610b',
+	url: 'http://api.jirengu.com/fm/getSong.php',
 	dataType: 'json',
 	Method: 'get',
 	data: {

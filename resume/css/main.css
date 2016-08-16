@@ -41,7 +41,7 @@ header nav h1{
 	margin: 12px 0;
 	float: left;
 	text-indent: -9999px;
-	background: url(../images/logo-jesseshowalter-white.svg) 0 0/contain no-repeat;
+	background: url(../images/logo-freda-white.svg) 0 0/contain no-repeat;
 	transition: all .3s ease-in-out;
 }
 @media (max-width: 867px){
@@ -183,7 +183,7 @@ header nav h1{
 }
 /**====hero====**/
 .siteHome-wrapper .hero{
-	background: url(../images/jesse-jump.jpg) top/cover no-repeat;
+	background: url(../images/banner-desktop.jpg) center/cover no-repeat;
 	z-index: 1;
 	width: 100%;
 	height: 700px;
@@ -206,7 +206,7 @@ header nav h1{
 	z-index: -1;
 }
 .siteHome-wrapper .hero .message{
-	width: 80%;
+	width: 100%;
 	margin: 0 auto;
 }
 .siteHome-wrapper .hero .message h1{
@@ -285,7 +285,6 @@ header nav h1{
 	transition: all .3s ease-in-out;
 }
 .siteHome-wrapper .projects article p{
-	font-style: italic;
 	margin: 0;
 }
 .siteHome-wrapper .projects article a{
@@ -437,12 +436,12 @@ article.dim{
 	padding: 40px;
 }
 .siteHome-wrapper .latest .blo{
-	background: url(../images/hawaiifirstBanner.jpg) center/cover no-repeat;
+	background: url(../images/cute.jpg) center/cover no-repeat;
 	float: left;
 	margin-left: 0; 
 }
 .siteHome-wrapper .latest .foundry{
-	background: url(../images/cssoverlay.jpg) center/cover no-repeat;
+	background: url(../images/lazy.jpg) center/cover no-repeat;
 	float: right;
 	margin-right: 0;
 }
@@ -509,7 +508,7 @@ article.dim{
 .siteHome-wrapper footer .soc .github{
 	background: #4da7de;
 }
-.siteHome-wrapper footer .soc .sina{
+.siteHome-wrapper footer .soc .shu{
 	background: #e02a20;
 	margin: 0px 15px;
 }
@@ -560,7 +559,7 @@ article.dim{
 	display: block;
 	left: 9px;
 	top: 15px;
-	background: url(../images/logo-jesseshowalter-inverse.svg) 0px 0px / contain no-repeat;
+	background: url(../images/logo-freda-inverse.svg) 0px 0px / contain no-repeat;
 }
 .sub-footer .back-to-top:after{
 	position: absolute;
@@ -654,7 +653,7 @@ article.dim{
   content: '';
   top: 0;
   right: 0;
-  background: url(http://www.jesseshowalter.com/assets/images/curl.png);
+  background: url(../images/curl.png);
   width: 69px;
   height: 63px;
   z-index: 1;

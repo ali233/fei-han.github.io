@@ -10,7 +10,7 @@ html{
 html .btn{
 	border: 3px solid #E0CB77;
 	font-size: inherit;
-	padding: 1.4rem 4rem;
+	padding: 1.2rem 4rem;
 	text-align: center;
 	font-weight: 100;
 	color: #fff;
@@ -69,4 +69,8 @@ h2{
 }
 h3{
 	font-size: 1.7rem;
+}
+::selection{
+	color: #fff;
+	background-color: #e9daa0;
 }
