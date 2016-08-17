@@ -28,7 +28,7 @@
 	/*------gotoTop------*/
 	$('.gotop-js').on('click',function(e){
 		e.preventDefault()
-		$('body,html').animate({scrollTop: 0},'slow')
+		$('body').animate({scrollTop: 0},'slow')
 	})
 	/*------modal------*/
 	var $last = $('li.last')
