@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>瀑布流</title>
+<style>
+	html,body,p,div{margin: auto;padding: 0;}
+	*{box-sizing: border-box;}
+	a{
+		text-decoration: none;
+		color: #333;
+	}
+	.clearfix:after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+	.wrap{
+		margin: 0 auto;
+		width: 900px;
+	}
+	.container{
+		position: relative;
+	}
+	.pic{
+		position: absolute;
+		padding: 0 0 10px 0;
+		width: 280px;
+		margin: 10px;
+		border: 1px solid #DFDFDF;
+		background: #FFF;
+		transition: all .8s;
+		display: block;
+	}
+	.pic img{
+	    margin: 10px;
+	    width: 260px;
+	}
+	.pic .header{
+		height: 25px;
+	    margin: 0 12px;
+	    border-bottom: 1px solid #DBDBDB;
+	}
+	#loadMore{
+		width: 100px;
+		height: 40px;
+		padding: 10px 20px;
+		text-align: center;
+		color: #333;
+		position: absolute;
+		left: 50%;
+		cursor: pointer;
+	}
+	.hide{
+		display: none;
+	}
+</style>
+</head>
+<body>
+<div class="wrap">
+	<div class="container clearfix">
+	 	<a href="#" class="pic hide"></a>
+	</div>
+	<button id="loadMore">Get More</button>
+</div>
+<script src="scripts/jquery-1.11.2.js"></script>
+<script>
+	$('#loadMore').on('click',function(){
+		loadAndPlace()
+	})
+	//瀑布流
+	var nodeWidth = $('.pic').outerWidth(true)
+	//console.log('s  '+nodeWidth)
+	var colNum = parseInt($('.container').width()/nodeWidth)
+	//console.log('f  '+colNum)
+	var colAllHeight = []
+	for (var i = 0; i < colNum; i++) {
+		colAllHeight.push(0)
+	}
+	function waterFallPlace(node){
+		var $node = $(node)
+		$node.each(function(){
+			var $currentNode = $(this)
+			var index = 0
+			var minHeight = colAllHeight[0]	
+			for (var i = 0; i < colAllHeight.length; i++) {
+				if (colAllHeight[i]<minHeight) {
+					minHeight = colAllHeight[i]
+					index = i
+				}
+			}
+			$currentNode.css({
+				left: nodeWidth*index,
+				top: minHeight
+			})
+			colAllHeight[index] = $currentNode.outerHeight(true) + colAllHeight[index]
+			$('.container').height(Math.max.apply(null,colAllHeight))
+		})
+	}
+	//模板渲染
+	function renderData(items){
+		var tmpl = ''
+		var $nodes
+		for (var i = 0; i < items.length; i++) {
+			tmpl +='<a href="#" class="pic">'
+			tmpl +='<img src=' + items[i].img_url + ' alt="">'
+			tmpl +='<p class="header">'+items[i].short_name+'</p>'
+			tmpl +='</a>'
+		}
+		$nodes = $(tmpl)
+		$('.container').append($nodes)
+		return $nodes
+	}
+	  var curPage = 1
+	  var perPageCount = 9
+
+	function loadAndPlace(){
+		$.ajax({
+			url: 'http://platform.sina.com.cn/slide/album_tech',
+			dataType: 'jsonp', 
+			jsonp:"jsoncallback",
+			data: {
+				app_key: '1271687855',
+				num: perPageCount,
+				page: curPage
+			}
+		}).done(function(ret){
+			if(ret && ret.status && ret.status.code === "0"){
+				place(ret.data);   
+			}else{
+				console.log('get error data');
+			}
+		});
+	}
+	loadAndPlace()
+	function place(nodeList){
+		var $nodes = renderData(nodeList);  //节点生成后添加到页面上
+		var defereds = [];  //创建存储 defered 对象的数组
+		$nodes.find('img').each(function(){
+			var defer = $.Deferred();
+			$(this).load(function(){
+				defer.resolve();
+			});   //当每个图片加载完成后，执行 resolve
+			defereds.push(defer);
+		});
+		$.when.apply(null,defereds).done(function() { //当所有的图片都执行 resolve 后，即全部图片加载后，执行下面的内容
+			console.log('new images all loaded ...');
+			//当节点里的图片全部加载后再使用瀑布流计算，否则会因为图片未加载 item 高度计算错误导致瀑布流高度计算出问题
+			waterFallPlace($nodes);
+		});
+}
+</script>
+</body>
+</html>
