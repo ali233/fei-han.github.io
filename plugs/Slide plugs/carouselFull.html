@@ -167,114 +167,26 @@
 	    	</ul>
 	    </div>
 	</div>
-	<script src="carousel.js"></script>
+	<script src="pack.js"></script>
     <script type="text/javascript">  
-
-		var $viewpoint = $('.viewpoint'),
-	    	$items = $viewpoint.children(),
-	    	$art = $('.art'),
-	    	$prev = $('.prev'),
-	    	$next = $('.next'),
-	    	$bullet = $('.bullet'),
-	    	imgWidth = $(window).width(),
-	    	imgCount = $viewpoint.children().size();
-	    	
-	    
-	    $viewpoint.prepend($items.last().clone());
-	    $viewpoint.append($items.first().clone());
-	    $viewpoint.find('.items').css({'width': imgWidth});
-	    $viewpoint.find('.cover').css({'width': imgWidth}); //前面获取的整个屏幕的宽度用上了,为后面的100%提供了基础
-	    var imgRealCount = $viewpoint.children().size();
-	    $viewpoint.css({
-	    	left: 0-imgWidth,width: imgRealCount*imgWidth
-	    });
-
-		//绑定事件
-	    var curIdx = 0; 
-	    var isAnimate = false;
-	   
-	   	$next.on('click',function(){
-	   		playNext();
-	   	})
-	   	$prev.on('click',function(){
-	   		playPre();
-	   	})
-
-	    $bullet.find('li').on('click',function(){
-				var idx = $(this).index();
-				if(idx > curIdx){
-					playNext(idx - curIdx);
-				}else if(idx < curIdx){
-					playPre(curIdx - idx);
-				}
-		});
-		
-
-
-
-	    setBg(1);
-	    autoPlay();
-
-		//绑定事件
-	    function playNext(idx){
-	    	var idx = idx ||1;
-	    	if (!isAnimate) {
-	    		isAnimate = true;
-	    		setBg(curIdx+2); //因为clone之后,都会加1
-	    		$viewpoint.stop(true,true).animate({left: '-='+(imgWidth*idx)},function(){
-	    			curIdx = (curIdx+idx)%imgCount;
-	    			if (curIdx === 0) {
-	    				$viewpoint.css({left: 0-imgWidth});
-	    				//和上个DOM的移动不一样的是,这里的css处理是为了让图片队列在到达最后一个clone元素时
-                   		//瞬间'归零',回到非克隆的本体位置,相当于归零;
-	    			}
-	    			isAnimate = false;
-	    			setBullet()
-	    		});
-	    	}
-	    }
-	    function playPre(idx){
-	    	var idx = idx || 1;
-	    	if (!isAnimate) {
-	    		isAnimate = true;
-	    		setBg(curIdx); //这里不需要减是因为clone之后,最前面多了一个,抵消了;
-	    		$viewpoint.stop(true,true).animate({left: '+='+(imgWidth*idx)},function(){
-	    			curIdx = (imgCount + curIdx -idx)%imgCount;
-	    			if (curIdx === (imgCount-1)) {
-	    				$viewpoint.css({left: 0-imgWidth*imgCount});
-	    				//这里的css操作也是一堵回归墙壁,回到非克隆本体的位置
-	    			}
-	    			isAnimate = false;
-	    			setBullet();
-	    		});
-	    	}
-	    }
-	    function setBullet(){
-	    	$bullet.children().removeClass('active')
-						      .eq(curIdx).addClass('active');
-	    }
-	    //停止自动播放
-	    function stopAuto(){
-	    	clearInterval(clock);
-	    }
-
-	    function autoPlay(){
-	    	clock = setInterval(function(){
-	    		playNext();
-	    	},5000)
-	    }
-
+		  	$('.art').slides({
+			  width: 300,
+			  height: 200,
+			  auto: true,
+			  nav: true
+			})
+			console.log('dd')
 	    //这里为了性能让图片用了懒加载
-		function setBg(idx){
-			var idx = idx || 0,
-				$node = $viewpoint.children().eq(idx)
-				$cover = $node.find('.cover'),
-				imgUrl = $cover.attr('data-bg-img');
-			if($node.data('isBgSet')){ return};
-			$cover.css('background-image', 'url('+imgUrl+')');
-			$node.data('isBgSet', true);
+		// function setBg(idx){
+		// 	var idx = idx || 0,
+		// 		$node = $viewpoint.children().eq(idx)
+		// 		$cover = $node.find('.cover'),
+		// 		imgUrl = $cover.attr('data-bg-img');
+		// 	if($node.data('isBgSet')){ return};
+		// 	$cover.css('background-image', 'url('+imgUrl+')');
+		// 	$node.data('isBgSet', true);
 			
-		}
+		// }
 
     </script>
 </body>

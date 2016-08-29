@@ -125,13 +125,14 @@ Carousel.prototype = {
 				_this.playNext(idx - _this.nowView);
 			}
 		}); 
+		console.log('sf')
 	}
 }
-
-	function carousel ($node,obj) {
-		var newCarousel = new Carousel($node,obj);
-		return newCarousel;
-	}
+console.log('sf')
+function carousel ($node,obj) {
+	var newCarousel = new Carousel($node,obj);
+	return newCarousel;
+}
 
 	// return carousel;
 
