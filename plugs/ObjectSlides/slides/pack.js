@@ -2,7 +2,7 @@ function Slides($element,options){
   this.options = options
   this.$element = $element
   this.timer = null 
-    this.init()
+  this.init()
 
 }
 //初始化
