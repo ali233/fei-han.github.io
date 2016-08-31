@@ -15,26 +15,154 @@ ul{
 body{
 	background: white;
     color: #666;
-    font: 12px/1.5 Arial,Verdana,"\5b8b\4f53",serif;
+    font: 12px/1.5 "微软雅黑",Verdana,"\5b8b\4f53",serif;
     -webkit-font-smoothing: antialiased;
 }
 .wrapper{
 	margin: auto;
-	width: 960px;
-	background-color: #333;
+	width: 1000px;
 }
 #site-aside{
 	float: left;
 	width: 340px;
+	font-size: 16px;
 	color: #fff;
-	padding: 20px;
+	padding: 30px 30px;
 	text-align: center;
-	background-color: #666;
+	background-color: #242424;
 }
 #site-aside .aside-head .name{
-	font-size: 22px;
+	font-size: 26px;
+	padding: 10px;
+}
+#site-aside .aside-head .will{
+	font-size: 18px;
+	padding: 15px;
+	border-top: 1px solid #c8c8c8;
+}
+#site-aside .aside-content .baseinfo{
+	border-top: 2px solid #c8c8c8;
+	border-bottom: 2px solid #c8c8c8;
+	padding: 10px 0;
+}
+#site-aside .aside-content .baseinfo dt{
+	width: 36%;
+	float: left;
+	text-align: right;
+	line-height: 35px;
+}
+#site-aside .aside-content .baseinfo dd{
+	width: 62%;
+	float: right;
+	text-align: left;
+	line-height: 35px;
+}
+#site-aside .aside-content .skills{
+	padding: 20px 0 280px;
+}
+#site-aside .aside-content .skills dt{
+	width: 30%;
+	text-align: right;
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	margin: 10px 0;
+	position: relative;
+	top: -5px;
+}
+#site-aside .aside-content .skills .progress{
+	width: 60%;
+	height: 20px;
+	margin-left: 10px;
+	text-align: left;
+	display: inline-block;
+	background-color: #999;
+	border-radius: 10px;
+	line-height: 45px;
+	position: relative;
+}
+#site-aside .aside-content .skills .progress .progress-bar{
+	position: absolute;
+	height: 20px;
+	background-color: #fff;
+	border-radius: 10px;
+}
+#site-aside .aside-content .skills .progress .hl{width: 90%;}
+#site-aside .aside-content .skills .progress .cs{width: 80%;}
+#site-aside .aside-content .skills .progress .js{width: 70%;}
+#site-aside .aside-content .skills .progress .jq{width: 70%;}
+#site-aside .aside-content .skills .progress .bs{width: 80%;}
+#site-aside .aside-content .skills .progress .ls{width: 70%;}
+#site-aside .aside-content .skills .progress .vs{width: 60%;}
+#site-aside .aside-foot .contact{
+	padding: 30px 45px;
+	text-align: left;
+	font-size: 14px;
+}
+#site-aside .aside-foot .contact li{
+	padding-bottom: 5px;
+}
+#site-aside .aside-foot .contact li span{
+	padding-right: 10px;
+}
+#site-aside .aside-foot .contact li a{
+	color: #fff;
 }
 #site-main{
 	float: left;
-	width: 620px;
+	width: 660px;
+	padding: 30px;
+	font-size: 16px;
+	background-color: #f4f1ea;
+}
+#site-main .main-title{
+	font-size: 20px;
+	color: #fff;
+	padding-left: 5px;
+	background-color: #252627;
+	border-radius: 3px;
+}
+#site-main .master-skill .list{
+	margin: 10px 0;
+	list-style: inside;
+}
+#site-main .master-skill .list li{
+	line-height: 1.8;
+}
+#site-main .project{
+	margin: 10px 0;
+}
+#site-main .project .pic{
+	float: left;
+	margin-right: 13px;
+}
+#site-main .project .project-title,
+#site-main .design .design-title{
+	font-size: 18px;
+	color: #333;
+	text-decoration: underline;
+}
+.rf{
+	float: right;
+}
+.lf{
+	float: left;
+}
+#site-main .master-design .design{
+	width: 50%;
+	margin-top: 10px;	
+}
+#site-main .master-foot{
+	margin-top: 10px;
+}
+#site-main .master-foot .wish{
+	padding-top: 10px;
+}
+#site-main .master-foot .personal{
+	display: block;
+	margin-top: 20px;
+	text-decoration: underline;
+	text-align: center;
+	font-weight: 700;
+	color: #333;
 }
