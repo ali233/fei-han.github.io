@@ -7,6 +7,7 @@ h1,h2{
 ul{
 	list-style: none;
 }
+a{text-decoration: none;}
 .clearfix:after{
 	content: '';
 	display: block;
@@ -14,7 +15,7 @@ ul{
 }
 body{
 	background: white;
-    color: #666;
+    color: #555;
     font: 12px/1.5 "微软雅黑",Verdana,"\5b8b\4f53",serif;
     -webkit-font-smoothing: antialiased;
 }
@@ -32,11 +33,11 @@ body{
 	background-color: #242424;
 }
 #site-aside .aside-head .name{
-	font-size: 26px;
-	padding: 10px;
+	font-size: 28px;
+	line-height: 2.0;
 }
 #site-aside .aside-head .will{
-	font-size: 18px;
+	font-size: 20px;
 	padding: 15px;
 	border-top: 1px solid #c8c8c8;
 }
@@ -95,7 +96,7 @@ body{
 #site-aside .aside-content .skills .progress .ls{width: 70%;}
 #site-aside .aside-content .skills .progress .vs{width: 60%;}
 #site-aside .aside-foot .contact{
-	padding: 30px 45px;
+	padding: 30px 42px;
 	text-align: left;
 	font-size: 14px;
 }
@@ -129,28 +130,30 @@ body{
 #site-main .master-skill .list li{
 	line-height: 1.8;
 }
-#site-main .project{
-	margin: 10px 0;
+#site-main .master-project .main-title,
+#site-main .master-design .main-title{
+	margin-bottom: 20px;
 }
-#site-main .project .pic{
+#site-main .project{
+	margin-bottom: 10px;
+}
+#site-main .master-design{
+	padding: 10px 0;
+}
+#site-main .project .pic,
+#site-main .master-design .design .pic{
 	float: left;
 	margin-right: 13px;
 }
 #site-main .project .project-title,
 #site-main .design .design-title{
 	font-size: 18px;
-	color: #333;
-	text-decoration: underline;
-}
-.rf{
-	float: right;
-}
-.lf{
-	float: left;
+	font-weight: 700;
+    color: #333;
+	border-bottom: 2px solid #333;
 }
 #site-main .master-design .design{
-	width: 50%;
-	margin-top: 10px;	
+	margin-top: 10px;
 }
 #site-main .master-foot{
 	margin-top: 10px;
@@ -161,7 +164,7 @@ body{
 #site-main .master-foot .personal{
 	display: block;
 	margin-top: 20px;
-	text-decoration: underline;
+	border-bottom: 2px solid #333;
 	text-align: center;
 	font-weight: 700;
 	color: #333;

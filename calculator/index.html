@@ -37,74 +37,72 @@
     
   </div>
 <script id="jsbin-javascript">
-var $input = $('input[name=input]')
-var lastInput
-var lastOperator
-var lastSecondInput
-//参数事件
-$('button.number').on('click',function(){
-  var value = $(this).text()
-  var number = value
-  if(lastOperator){
-    var inputValue2
-    if(lastSecondInput){
-      inputValue2 = lastSecondInput + number
+  var $input = $('input[name=input]')
+  var lastInput
+  var lastOperator
+  var lastSecondInput
+  //参数事件
+  $('button.number').on('click',function(){
+    var value = $(this).text()
+    var number = value
+    if(lastOperator){
+      var inputValue2
+      if(lastSecondInput){
+        inputValue2 = lastSecondInput + number
+      }else{
+        inputValue2 = number 
+      }
+      lastSecondInput=inputValue2
+      $input.val(inputValue2)
     }else{
-      inputValue2 = number 
+      var inputValue1
+      if(lastInput){
+        inputValue1 = lastInput + number
+      }else{
+        inputValue1 = number 
+      }
+      lastInput = inputValue1
+      $input.val(inputValue1)
     }
-    lastSecondInput=inputValue2
-    $input.val(inputValue2)
-  }else{
-    var inputValue1
-    if(lastInput){
-      inputValue1 = lastInput + number
-    }else{
-      inputValue1 = number 
-    }
-    lastInput = inputValue1
-    $input.val(inputValue1)
-  }
 
-})
-//操作符
-$('.side button').on('click',function(){
-  var oprator = $(this).text()
-  lastOperator = oprator
-  $input.val(lastOperator) 
-})
-//result事件
-$('button[name=result]').on('click',function(){
-  lastInput =+lastInput
-  lastSecondInput =+lastSecondInput
-  var result
-  var operatorFunction = operatorFactory(lastOperator)
-  result =  operatorFunction(lastInput,lastSecondInput)
-  $input.val(result)
-  lastOperator = ''
-  lastInput = ''
-  lastSecondInput = ''
-})
-//clear清除数据
-$('button[name=clear]').on('click',function(){
-  if(lastOperator || lastInput || lastSecondInput ||$input.val()){
+  })
+  //操作符
+  $('.side button').on('click',function(){
+    var oprator = $(this).text()
+    lastOperator = oprator
+    $input.val(lastOperator) 
+  })
+  //result事件
+  $('button[name=result]').on('click',function(){
+    lastInput =+lastInput
+    lastSecondInput =+lastSecondInput
+    var result
+    var operatorFunction = operatorFactory(lastOperator)
+    result =  operatorFunction(lastInput,lastSecondInput)
+    $input.val(result)
     lastOperator = ''
     lastInput = ''
     lastSecondInput = ''
-    $input.val('')
+  })
+  //clear清除数据
+  $('button[name=clear]').on('click',function(){
+    if(lastOperator || lastInput || lastSecondInput ||$input.val()){
+      lastOperator = ''
+      lastInput = ''
+      lastSecondInput = ''
+      $input.val('')
+    }
+  })
+  //table设计模式 
+  function operatorFactory(name){
+    var table = {
+      '+': function(a,b){return a+b},
+      '-': function(a,b){return a-b},
+      '*': function(a,b){return a*b},
+      '/': function(a,b){return a/b}
+    }
+    return table[name]
   }
-})
-//table设计模式 
-function operatorFactory(name){
-  var table = {
-    '+': function(a,b){return a+b},
-    '-': function(a,b){return a-b},
-    '*': function(a,b){return a*b},
-    '/': function(a,b){return a/b}
-  }
-  return table[name]
-}
-
-
 </script>
 </body>
 </html>
