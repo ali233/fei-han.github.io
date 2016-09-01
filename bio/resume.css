@@ -21,7 +21,7 @@ body{
 }
 .wrapper{
 	margin: auto;
-	width: 1000px;
+	width: 940px;
 }
 #site-aside{
 	float: left;
@@ -59,7 +59,7 @@ body{
 	line-height: 35px;
 }
 #site-aside .aside-content .skills{
-	padding: 20px 0 280px;
+	padding: 20px 0 314px;
 }
 #site-aside .aside-content .skills dt{
 	width: 30%;
@@ -111,7 +111,7 @@ body{
 }
 #site-main{
 	float: left;
-	width: 660px;
+	width: 600px;
 	padding: 30px;
 	font-size: 16px;
 	background-color: #f4f1ea;
@@ -163,6 +163,8 @@ body{
 }
 #site-main .master-foot .personal{
 	display: block;
+	width: 100px;
+	margin: auto;
 	margin-top: 20px;
 	border-bottom: 2px solid #333;
 	text-align: center;
