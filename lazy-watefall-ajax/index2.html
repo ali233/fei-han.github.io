@@ -71,9 +71,7 @@
 	})
 	//瀑布流
 	var nodeWidth = $('.pic').outerWidth(true)
-	//console.log('s  '+nodeWidth)
 	var colNum = parseInt($('.container').width()/nodeWidth)
-	//console.log('f  '+colNum)
 	var colAllHeight = []
 	for (var i = 0; i < colNum; i++) {
 		colAllHeight.push(0)
@@ -105,7 +103,7 @@
 		for (var i = 0; i < items.length; i++) {
 			tmpl +='<a href="#" class="pic">'
 			tmpl +='<img src=' + items[i].img_url + ' alt="">'
-			tmpl +='<p class="header">'+items[i].short_name+'</p>'
+			tmpl +='<h4 class="header">'+items[i].short_name+'</h4>'
 			tmpl +='</a>'
 		}
 		$nodes = $(tmpl)
