@@ -63,39 +63,40 @@
 	</div>
 
 <script src="scripts/jquery-1.11.2.js"></script>
+<script src="scripts/waterFall.js"></script>
 <script>
+	waterFall.init($('.container'));
+	// function render(){
+	// 	var ctWidth = $(window).width();
+	// 	var itemsWidth = $('.items').outerWidth(true)
+	// 	var colNum = Math.floor(ctWidth/itemsWidth)
+	// 	var colSumHeight = []
 
-	function render(){
-		var ctWidth = $(window).width();
-		var itemsWidth = $('.items').outerWidth(true)
-		var colNum = Math.floor(ctWidth/itemsWidth)
-		var colSumHeight = []
+	// 	for (var i = 0; i < colNum; i++) {
+	// 		colSumHeight.push(0)
+	// 	}
+	// 	$('.items').each(function(){
+	// 		var $node = $(this)
+	// 		var index = 0
+	// 		minSumHeight = colSumHeight[0]
+	// 		for (var i = 0; i < colSumHeight.length; i++) {
+	// 			if (colSumHeight[i] < minSumHeight) {
+	// 				index = i
+	// 				minSumHeight = colSumHeight[i]
+	// 			}
+	// 		}
+	// 		$node.css({
+	// 			left: itemsWidth*index,
+	// 			top: minSumHeight
+	// 		});
+	// 		colSumHeight[index] = $node.outerHeight(true) +colSumHeight[index]
+	// 	});
+	// }
+	// render()
 
-		for (var i = 0; i < colNum; i++) {
-			colSumHeight.push(0)
-		}
-		$('.items').each(function(){
-			var $node = $(this)
-			var index = 0
-			minSumHeight = colSumHeight[0]
-			for (var i = 0; i < colSumHeight.length; i++) {
-				if (colSumHeight[i] < minSumHeight) {
-					index = i
-					minSumHeight = colSumHeight[i]
-				}
-			}
-			$node.css({
-				left: itemsWidth*index,
-				top: minSumHeight
-			});
-			colSumHeight[index] = $node.outerHeight(true) +colSumHeight[index]
-		});
-	}
-	render()
-
-	$(window).on('resize',function(){
-		 render()
-	})
+	// $(window).on('resize',function(){
+	// 	 render()
+	// })
 
 
 
